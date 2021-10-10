@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "a8b7ec4d-3ad5-4d36-8a6e-34e8c6f6af16",
+		"name": "VBI-Music",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b456d16b-a96e-47d9-8c44-e2cc3c5d4be4",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"",
+							"if(data.session.token) {",
+							"    pm.environment.set(\"token\", data.session.token);",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"identifier\": \"preethi@gmail.com\",\n\t\"password\": \"test@123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List songs",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/list/songs?search=id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"list",
+						"songs"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"My play\",\n    \"songIds\": [\n        {\n            \"songId\": \"6161490cda559b1e7f1f9b24\"\n        },\n        {\n            \"songId\": \"6161496bb6e2fb1f030a083c\"\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/playlist",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"playlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update playlist",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"My playlist\",\n\t\"songIds\": [\n\t\t{\"songId\":\"6161499bd2a4461f3bf6ce94\"}]\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/playlist/6162f4ba47c50254704308db",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"playlist",
+						"6162f4ba47c50254704308db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list songs in playlist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"type": "text",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/playlist?shuffle=true&playlistId=6162f4ba47c50254704308db",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"playlist"
+					],
+					"query": [
+						{
+							"key": "shuffle",
+							"value": "true"
+						},
+						{
+							"key": "playlistId",
+							"value": "6162f4ba47c50254704308db"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
