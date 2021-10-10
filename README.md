@@ -37,21 +37,21 @@ BODY: {
 }
 
 RESPONSE: {
-    "session": {
-        "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODgzOTI4LCJleHAiOjE2MzM4ODc1Mjh9.UWR6dhG158Q1OHln-41CU05qHz6yyRuFhEncX_uTanE",
-        "validity": 0,
-        "specialMessage": null
-    },
-    "data": {
-        "_id": "6161462a20c2cc157ccc4702",
-        "email": "preethi@gmail.com",
-        "password": "test@123"
-    },
-    "status": {
-        "code": 200,
-        "status": "Success",
-        "message": "User Successfully logged in"
-    }
+	"session": {
+		"token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODgzOTI4LCJleHAiOjE2MzM4ODc1Mjh9.UWR6dhG158Q1OHln-41CU05qHz6yyRuFhEncX_uTanE",
+		"validity": 0,
+		"specialMessage": null
+	},
+	"data": {
+		"_id": "6161462a20c2cc157ccc4702",
+		"email": "preethi@gmail.com",
+		"password": "test@123"
+	},
+	"status": {
+		"code": 200,
+		"status": "Success",
+		"message": "User Successfully logged in"
+	}
 }
 
 2(a). To list the songs: /api/list/songs
