@@ -29,30 +29,30 @@ For development, you will only need Node.js and a node global package, NPM, inst
 
 1(a). To login default user: /api/login
 
-METHOD: POST
+    METHOD: POST
 
-BODY: {
-    "identifier": "preethi@gmail.com",
-    "password": "test@123"
-}
+    BODY: {
+        "identifier": "preethi@gmail.com",
+        "password": "test@123"
+    }
 
-RESPONSE: {
-	"session": {
-		"token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODgzOTI4LCJleHAiOjE2MzM4ODc1Mjh9.UWR6dhG158Q1OHln-41CU05qHz6yyRuFhEncX_uTanE",
-		"validity": 0,
-		"specialMessage": null
-	},
-	"data": {
-		"_id": "6161462a20c2cc157ccc4702",
-		"email": "preethi@gmail.com",
-		"password": "test@123"
-	},
-	"status": {
-		"code": 200,
-		"status": "Success",
-		"message": "User Successfully logged in"
-	}
-}
+    RESPONSE: {
+        "session": {
+            "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODgzOTI4LCJleHAiOjE2MzM4ODc1Mjh9.UWR6dhG158Q1OHln-41CU05qHz6yyRuFhEncX_uTanE",
+            "validity": 0,
+            "specialMessage": null
+        },
+        "data": {
+            "_id": "6161462a20c2cc157ccc4702",
+            "email": "preethi@gmail.com",
+            "password": "test@123"
+        },
+        "status": {
+            "code": 200,
+            "status": "Success",
+            "message": "User Successfully logged in"
+        }
+    }
 
 2(a). To list the songs: /api/list/songs
 
@@ -113,7 +113,7 @@ RESPONSE: {
 }
 
 2(b). To search a song in the list: /api/list/songs?search="song name"  
-
+    
     METHOD: GET
 
     BODY: none  
@@ -193,53 +193,53 @@ RESPONSE: {
 
 4(a). To update a playlist: /playlist
 
-METHOD: PUT
+    METHOD: PUT
 
-BODY: {
-    "name": "My playlist",
-    "songIds": [
-        {
-            "songId": "6161499bd2a4461f3bf6ce94"
-        }
-    ]
-}
-
-RESPONSE: {
-    "session": {
-        "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODczNzQ2LCJleHAiOjE2MzM4NzczNDZ9._1nlnre8-WqM0_HS8vJTXV5gml9l7rRB3NaQVJCgHWE",
-        "validity": 0,
-        "specialMessage": null
-    },
-    "data": {
-        "_id": "6162f4ba47c50254704308db",
-        "userId": "6161462a20c2cc157ccc4702",
+    BODY: {
+        "name": "My playlist",
         "songIds": [
             {
-                "date": "2021-10-10T14:11:59.308Z",
-                "_id": "6162f4ba47c50254704308dc",
-                "songId": "6161490cda559b1e7f1f9b24"
-            },
-            {
-                "date": "2021-10-10T14:11:59.308Z",
-                "_id": "6162f4ba47c50254704308dd",
-                "songId": "6161496bb6e2fb1f030a083c"
-            },
-            {
-                "date": "2021-10-10T14:34:18.289Z",
-                "_id": "6162fa3ea2aabd5b53b3ea51",
                 "songId": "6161499bd2a4461f3bf6ce94"
             }
-        ],
-        "name": "My playlist",
-        "created_at": "2021-10-10T14:12:10.958Z",
-        "updated_at": "2021-10-10T14:35:42.681Z"
-    },
-    "status": {
-        "code": 200,
-        "status": "Success",
-        "message": "Song added to the play list successfully"
+        ]
     }
-}
+
+    RESPONSE: {
+        "session": {
+            "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODczNzQ2LCJleHAiOjE2MzM4NzczNDZ9._1nlnre8-WqM0_HS8vJTXV5gml9l7rRB3NaQVJCgHWE",
+            "validity": 0,
+            "specialMessage": null
+        },
+        "data": {
+            "_id": "6162f4ba47c50254704308db",
+            "userId": "6161462a20c2cc157ccc4702",
+            "songIds": [
+                {
+                    "date": "2021-10-10T14:11:59.308Z",
+                    "_id": "6162f4ba47c50254704308dc",
+                    "songId": "6161490cda559b1e7f1f9b24"
+                },
+                {
+                    "date": "2021-10-10T14:11:59.308Z",
+                    "_id": "6162f4ba47c50254704308dd",
+                    "songId": "6161496bb6e2fb1f030a083c"
+                },
+                {
+                    "date": "2021-10-10T14:34:18.289Z",
+                    "_id": "6162fa3ea2aabd5b53b3ea51",
+                    "songId": "6161499bd2a4461f3bf6ce94"
+                }
+            ],
+            "name": "My playlist",
+            "created_at": "2021-10-10T14:12:10.958Z",
+            "updated_at": "2021-10-10T14:35:42.681Z"
+        },
+        "status": {
+            "code": 200,
+            "status": "Success",
+            "message": "Song added to the play list successfully"
+        }
+    }
 
 5. To list the playlist(GET): /api/playlist
 
@@ -247,61 +247,61 @@ RESPONSE: {
 
 5(b). To shuffle songs in playlist: /api/playlist?shuffle=true
 
-METHOD: GET
+    METHOD: GET
 
-BODY: none
+    BODY: none
 
-PARAMS: shuffle = true, playlistId = 6162f4ba47c50254704308db
+    PARAMS: shuffle = true, playlistId = 6162f4ba47c50254704308db
 
-RESPONSE: {
-    "session": {
-        "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODczNzQ2LCJleHAiOjE2MzM4NzczNDZ9._1nlnre8-WqM0_HS8vJTXV5gml9l7rRB3NaQVJCgHWE",
-        "validity": 0,
-        "specialMessage": null
-    },
-    "data": [
-        {
-            "_id": "6162f4ba47c50254704308db",
-            "playlist": "My playlist",
-            "songs": [
-                {
-                    "_id": "6161490cda559b1e7f1f9b24",
-                    "singers": [
-                        "Kim",
-                        "cold play"
-                    ],
-                    "songTitle": "Universe",
-                    "genre": "Melody",
-                    "created_at": "2021-10-10T14:11:59.308Z"
-                },
-                {
-                    "_id": "6161496bb6e2fb1f030a083c",
-                    "singers": [
-                        "Kim",
-                        "Jin",
-                        "Jungkook"
-                    ],
-                    "songTitle": "Idol",
-                    "genre": "Rap",
-                    "created_at": "2021-10-10T14:11:59.308Z"
-                },
-                {
-                    "_id": "6161499bd2a4461f3bf6ce94",
-                    "singers": [
-                        "Kim",
-                        "Jhope",
-                        "RM"
-                    ],
-                    "songTitle": "Butter",
-                    "genre": "Rap",
-                    "created_at": "2021-10-10T14:34:18.289Z"
-                }
-            ]
+    RESPONSE: {
+        "session": {
+            "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODczNzQ2LCJleHAiOjE2MzM4NzczNDZ9._1nlnre8-WqM0_HS8vJTXV5gml9l7rRB3NaQVJCgHWE",
+            "validity": 0,
+            "specialMessage": null
+        },
+        "data": [
+            {
+                "_id": "6162f4ba47c50254704308db",
+                "playlist": "My playlist",
+                "songs": [
+                    {
+                        "_id": "6161490cda559b1e7f1f9b24",
+                        "singers": [
+                            "Kim",
+                            "cold play"
+                        ],
+                        "songTitle": "Universe",
+                        "genre": "Melody",
+                        "created_at": "2021-10-10T14:11:59.308Z"
+                    },
+                    {
+                        "_id": "6161496bb6e2fb1f030a083c",
+                        "singers": [
+                            "Kim",
+                            "Jin",
+                            "Jungkook"
+                        ],
+                        "songTitle": "Idol",
+                        "genre": "Rap",
+                        "created_at": "2021-10-10T14:11:59.308Z"
+                    },
+                    {
+                        "_id": "6161499bd2a4461f3bf6ce94",
+                        "singers": [
+                            "Kim",
+                            "Jhope",
+                            "RM"
+                        ],
+                        "songTitle": "Butter",
+                        "genre": "Rap",
+                        "created_at": "2021-10-10T14:34:18.289Z"
+                    }
+                ]
+            }
+        ],
+        "status": {
+            "code": 200,
+            "status": "Success",
+            "message": "Songs are listed successfully"
         }
-    ],
-    "status": {
-        "code": 200,
-        "status": "Success",
-        "message": "Songs are listed successfully"
     }
-}
