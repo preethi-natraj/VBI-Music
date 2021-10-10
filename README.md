@@ -14,8 +14,8 @@ For development, you will only need Node.js and a node global package, NPM, inst
 
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
+    $ git clone https://github.com/preethi-natraj/VBI-Music.git
+    $ cd VBI-Music
     $ npm install
 
 ## Running the project
