@@ -56,61 +56,61 @@ For development, you will only need Node.js and a node global package, NPM, inst
 
 2(a). To list the songs: /api/list/songs
 
- METHOD: GET
+    METHOD: GET
 
- BODY: none
+    BODY: none
 
- RESPONSE:{
-    "session": {
-        "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODgzODk4LCJleHAiOjE2MzM4ODc0OTh9.dDBOuL2KR1XQUfOFQB2uF1R9rFQrKsMjc2ZoeA8faXk",
-        "validity": 0,
-        "specialMessage": null
-    },
-    "data": [
-        {
-            "_id": "6161490cda559b1e7f1f9b24",
-            "singers": [
-                "Kim",
-                "cold play"
-            ],
-            "songTitle": "Universe",
-            "album": "BTS"
+    RESPONSE:{
+        "session": {
+            "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODgzODk4LCJleHAiOjE2MzM4ODc0OTh9.dDBOuL2KR1XQUfOFQB2uF1R9rFQrKsMjc2ZoeA8faXk",
+            "validity": 0,
+            "specialMessage": null
         },
-        {
-            "_id": "6161490cda559b1e7f1f9b24",
-            "singers": [
-                "Kim",
-                "cold play"
-            ],
-            "songTitle": "Universe",
-            "album": "Morning Melodies"
-        },
-        {
-            "_id": "6161496bb6e2fb1f030a083c",
-            "singers": [
-                "Kim",
-                "Jin",
-                "Jungkook"
-            ],
-            "songTitle": "Idol"
-        },
-        {
-            "_id": "6161499bd2a4461f3bf6ce94",
-            "singers": [
-                "Kim",
-                "Jhope",
-                "RM"
-            ],
-            "songTitle": "Butter",
-            "album": "Morning Melodies"
+        "data": [
+            {
+                "_id": "6161490cda559b1e7f1f9b24",
+                "singers": [
+                    "Kim",
+                    "cold play"
+                ],
+                "songTitle": "Universe",
+                "album": "BTS"
+            },
+            {
+                "_id": "6161490cda559b1e7f1f9b24",
+                "singers": [
+                    "Kim",
+                    "cold play"
+                ],
+                "songTitle": "Universe",
+                "album": "Morning Melodies"
+            },
+            {
+                "_id": "6161496bb6e2fb1f030a083c",
+                "singers": [
+                    "Kim",
+                    "Jin",
+                    "Jungkook"
+                ],
+                "songTitle": "Idol"
+            },
+            {
+                "_id": "6161499bd2a4461f3bf6ce94",
+                "singers": [
+                    "Kim",
+                    "Jhope",
+                    "RM"
+                ],
+                "songTitle": "Butter",
+                "album": "Morning Melodies"
+            }
+        ],
+        "status": {
+            "code": 200,
+            "status": "Success",
+            "message": "Songs are listed successfully"
         }
-    ],
-    "status": {
-        "code": 200,
-        "status": "Success",
-        "message": "Songs are listed successfully"
     }
-}
 
 2(b). To search a song in the list: /api/list/songs?search="song name"  
     
