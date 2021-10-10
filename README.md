@@ -32,8 +32,8 @@ For development, you will only need Node.js and a node global package, NPM, inst
 METHOD: POST
 
 BODY: {
-	"identifier": "preethi@gmail.com",
-	"password": "test@123"
+    "identifier": "preethi@gmail.com",
+    "password": "test@123"
 }
 
 RESPONSE: {
@@ -121,10 +121,10 @@ RESPONSE: {
     PARAMS: search = id
 
     RESPONSE: {
-    "session": {
-        "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODc4OTI2LCJleHAiOjE2MzM4ODI1MjZ9.zG2BAxZCgwQVEUV2gwwiP7xi0sWcfjTfqVjJtUsbeuo",
-        "validity": 0,
-        "specialMessage": null
+        "session": {
+            "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODc4OTI2LCJleHAiOjE2MzM4ODI1MjZ9.zG2BAxZCgwQVEUV2gwwiP7xi0sWcfjTfqVjJtUsbeuo",
+            "validity": 0,
+            "specialMessage": null
     },
     "data": [
         {
@@ -196,10 +196,12 @@ RESPONSE: {
 METHOD: PUT
 
 BODY: {
-	"name": "My playlist",
-	"songIds": [{
-		"songId": "6161499bd2a4461f3bf6ce94"
-	}]
+    "name": "My playlist",
+    "songIds": [
+        {
+            "songId": "6161499bd2a4461f3bf6ce94"
+        }
+    ]
 }
 
 RESPONSE: {
@@ -251,7 +253,7 @@ BODY: none
 
 PARAMS: shuffle = true, playlistId = 6162f4ba47c50254704308db
 
-BODY: {
+RESPONSE: {
     "session": {
         "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTYxNDYyYTIwYzJjYzE1N2NjYzQ3MDIiLCJlbWFpbCI6InByZWV0aGlAZ21haWwuY29tIiwiaWF0IjoxNjMzODczNzQ2LCJleHAiOjE2MzM4NzczNDZ9._1nlnre8-WqM0_HS8vJTXV5gml9l7rRB3NaQVJCgHWE",
         "validity": 0,
